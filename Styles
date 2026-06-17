@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #f6efe5;
+  color: #2f241d;
+}
+
+/* Whole page container */
+.page {
+  min-height: 100vh;
+  padding: 15px;
+}
+
+/* Book rows at the top and bottom */
+.book-row {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.book-row img {
+  width: 70px;
+  height: auto;
+}
+
+/* Middle area with books on both sides */
+.middle {
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Book columns on the left and right */
+.book-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.book-column img {
+  width: 70px;
+  height: auto;
+}
+
+/* Main content box */
+.content {
+  background-color: #fffaf2;
+  border: 4px solid #b88b5a;
+  border-radius: 25px;
+  padding: 35px;
+  max-width: 850px;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(60, 40, 20, 0.2);
+}
+
+/* Name and photo section */
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #b88b5a;
+  background-color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #5b3924;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #7a5a3a;
+}
+
+/* Project description area */
+.project {
+  background-color: #f3dfc1;
+  border-radius: 18px;
+  padding: 25px;
+  border: 2px solid #c49a6c;
+}
+
+.project h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #5b3924;
+}
+
+.project p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Makes it look good on smaller screens */
+@media (max-width: 700px) {
+  .middle {
+    grid-template-columns: 1fr;
+  }
+
+  .book-column {
+    display: none;
+  }
+
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .content {
+    padding: 25px;
+  }
+}
