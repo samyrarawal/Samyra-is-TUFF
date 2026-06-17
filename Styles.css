@@ -108,6 +108,25 @@ h1 {
   line-height: 1.6;
 }
 
+/* Gallery styles */
+.gallery {
+  margin-top: 25px;
+}
+.gallery .images {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gallery .images img {
+  max-width: 260px;
+  width: 45%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(60,40,20,0.15);
+  border: 3px solid #f3dfc1;
+}
+
 /* Makes it look good on smaller screens */
 @media (max-width: 700px) {
   .middle {
